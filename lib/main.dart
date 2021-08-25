@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:login_cenah/rumah.dart';
 
 void main() => runApp(MyApp());
 
@@ -25,61 +26,10 @@ class _LoginState extends State<Login> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Mari Membadut')),
-      drawer: Drawer(
-        elevation: 5,
-        child: Column(
-          children: <Widget>[
-            Container(
-                width: double.infinity,
-                height: 100,
-                color: Colors.lightBlue,
-                alignment: Alignment.bottomLeft,
-                child: Text('Badut Menu',
-                    style: TextStyle(color: Colors.white, fontSize: 30))),
-            SizedBox(
-              height: 20,
-            ),
-            ListTile(
-                leading: Icon(
-                  Icons.person,
-                  size: 25,
-                ),
-                title: Text(
-                  'Tentang Kami',
-                  style: TextStyle(fontSize: 25),
-                )),
-            ListTile(
-                leading: Icon(
-                  Icons.question_answer,
-                  size: 25,
-                ),
-                title: Text(
-                  'FAQ',
-                  style: TextStyle(fontSize: 25),
-                )),
-            ListTile(
-                leading: Icon(
-                  Icons.markunread_mailbox,
-                  size: 25,
-                ),
-                title: Text(
-                  'Saran dan Bantuan',
-                  style: TextStyle(fontSize: 25),
-                )),
-            ListTile(
-                leading: Icon(
-                  Icons.settings,
-                  size: 25,
-                ),
-                title: Text(
-                  'Pengaturan',
-                  style: TextStyle(fontSize: 25),
-                ))
-          ],
-        ),
-      ),
-      resizeToAvoidBottomInset: false,
+      appBar: AppBar(
+          title: Text(
+        'Mari Membadut',
+      )),
       body: Container(
         height: MediaQuery.of(context).size.width,
         color: Colors.lightBlue,
@@ -147,22 +97,24 @@ class _LoginState extends State<Login> {
               height: 0,
             ),
             Card(
-              color: Colors.black45,
-              elevation: 5,
-              child: Container(
-                height: 50,
-                child: InkWell(
-                  splashColor: Colors.grey,
-                  onTap: () {},
-                  child: Center(
-                    child: Text(
-                      'Monggo',
-                      style: TextStyle(fontSize: 20, color: Colors.white),
-                    ),
-                  ),
-                ),
-              ),
-            )
+                color: Colors.lightBlue,
+                elevation: 5,
+                child: Container(
+                    height: 50,
+                    child: Center(
+                      child: InkWell(
+                          splashColor: Colors.grey,
+                          child: Text(
+                            'Monggo',
+                            style: TextStyle(fontSize: 20, color: Colors.white),
+                          ),
+                          onTap: () {
+                            Navigator.pushReplacement(context,
+                                MaterialPageRoute(builder: (context) {
+                              return Rumah();
+                            }));
+                          }),
+                    )))
           ],
         ),
       ),
