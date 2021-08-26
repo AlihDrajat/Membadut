@@ -1,16 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:login_cenah/main.dart';
 
-class Rumah extends StatefulWidget {
-  // final String username;
+class Rumah extends StatelessWidget {
+  const Rumah({Key? key}) : super(key: key);
 
-  // _Rumah({this.username});
-
-  @override
-  _RumahState createState() => _RumahState();
-}
-
-class _RumahState extends State<Rumah> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -70,24 +63,16 @@ class _RumahState extends State<Rumah> {
             ],
           ),
         ),
+        resizeToAvoidBottomInset: false,
         body: Center(
-            child: Column(
-          children: <Widget>[
-            Text(
-              'Selamat Datang',
-              style: TextStyle(fontSize: 20),
-            ),
-            SizedBox(
-              height: 10,
-            ),
-            ElevatedButton(
-              onPressed: () {
-                Navigator.pushReplacement(
-                    context, MaterialPageRoute(builder: (context) => Login()));
-              },
-              child: Text('Keluar'),
-            )
-          ],
+            child: ElevatedButton(
+          child: Text('Kembali'),
+          onPressed: () {
+            Navigator.pushReplacement(context,
+                MaterialPageRoute(builder: (context) {
+              return Login();
+            }));
+          },
         )));
   }
 }
