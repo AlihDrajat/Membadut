@@ -2,10 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:login_cenah/main.dart';
 
 class Rumah extends StatefulWidget {
-  // final String username;
-
-  // _Rumah({this.username});
-
   @override
   _RumahState createState() => _RumahState();
 }
