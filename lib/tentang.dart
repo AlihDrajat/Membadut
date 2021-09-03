@@ -12,22 +12,19 @@ class _AboutUsState extends State<AboutUs> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: Text('Tentang Kami'),
-        ),
-        body: Center(
-            child: ElevatedButton(
-          child: Text('Halaman Utama'),
+      appBar: AppBar(
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back),
           onPressed: () {
-            Navigator.pushReplacement(
-              context,
-              MaterialPageRoute(
-                builder: (context) {
-                  return Rumah();
-                },
-              ),
-            );
+            Navigator.pushReplacement(context,
+                MaterialPageRoute(builder: (context) {
+              return Rumah();
+            }));
           },
-        )));
+        ),
+        title: Text('Tentang Kami'),
+      ),
+      body: Center(child: Text('About Us')),
+    );
   }
 }

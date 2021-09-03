@@ -13,6 +13,15 @@ class _SettingState extends State<Setting> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
+          leading: IconButton(
+            icon: Icon(Icons.arrow_back),
+            onPressed: () {
+              Navigator.pushReplacement(context,
+                  MaterialPageRoute(builder: (context) {
+                return Rumah();
+              }));
+            },
+          ),
           title: Text('Pengaturan'),
         ),
         body: Center(
