@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:login_cenah/main.dart';
 import 'drawer.dart';
 
 class Rumah extends StatefulWidget {
@@ -15,7 +14,6 @@ class _RumahState extends State<Rumah> {
           title: Text('Ini Halaman Utama'),
         ),
         drawer: Drawers(),
-        endDrawer: Drawers(),
         body: Center(
             child: Column(
           children: <Widget>[
@@ -23,16 +21,6 @@ class _RumahState extends State<Rumah> {
               'Selamat Datang',
               style: TextStyle(fontSize: 20),
             ),
-            SizedBox(
-              height: 10,
-            ),
-            ElevatedButton(
-              onPressed: () {
-                Navigator.pushReplacement(
-                    context, MaterialPageRoute(builder: (context) => Login()));
-              },
-              child: Text('Keluar'),
-            )
           ],
         )));
   }

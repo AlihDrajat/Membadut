@@ -4,6 +4,7 @@ import 'package:login_cenah/pengaturan.dart';
 import 'package:login_cenah/pertanyaan.dart';
 import 'package:login_cenah/saran.dart';
 import 'package:login_cenah/tentang.dart';
+import 'package:login_cenah/slider.dart';
 
 class Drawers extends StatelessWidget {
   @override
@@ -24,7 +25,7 @@ class Drawers extends StatelessWidget {
             },
           ),
           _drawerItem(
-            icon: Icons.message,
+            icon: Icons.question_answer_rounded,
             text: 'Saran dan Bantuan',
             onTap: () {
               Navigator.pushReplacement(context,
@@ -34,7 +35,7 @@ class Drawers extends StatelessWidget {
             },
           ),
           _drawerItem(
-            icon: Icons.question_answer,
+            icon: Icons.help_outline_sharp,
             text: 'FAQ',
             onTap: () {
               Navigator.pushReplacement(context,
@@ -50,6 +51,16 @@ class Drawers extends StatelessWidget {
               Navigator.pushReplacement(context,
                   MaterialPageRoute(builder: (context) {
                 return Setting();
+              })),
+            },
+          ),
+          _drawerItem(
+            icon: Icons.adb,
+            text: 'Slider',
+            onTap: () => {
+              Navigator.pushReplacement(context,
+                  MaterialPageRoute(builder: (context) {
+                return Sliders();
               })),
             },
           ),

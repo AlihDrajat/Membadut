@@ -29,6 +29,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   http: ^0.13.3
   shared_preferences: ^2.0.7
+  carousel_slider: ^1.3.0
 
 dev_dependencies:
   flutter_test:
@@ -51,6 +52,9 @@ flutter:
     - assets/WHO TAO.jpg
     - assets/DSCF6181.jpg
     - assets/istri.jpg
+    - assets/mihoyo.jpg
+    - assets/shopi.jpg
+    - assets/telkom.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

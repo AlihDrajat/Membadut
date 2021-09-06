@@ -146,23 +146,24 @@ class _LoginState extends State<Login> {
                       height: 0,
                     ),
                     Card(
-                        color: Colors.blue,
-                        elevation: 5,
-                        child: Container(
-                          height: 50,
+                      color: Colors.blue,
+                      elevation: 5,
+                      child: Container(
+                        height: 50,
+                        child: Center(
+                            child: InkWell(
+                          splashColor: Colors.white,
+                          onTap: () => prosesLogin(),
                           child: Center(
-                              child: InkWell(
-                            splashColor: Colors.white,
-                            onTap: () => prosesLogin(),
-                            child: Center(
-                              child: Text(
-                                'Monggo',
-                                style: TextStyle(
-                                    fontSize: 20, color: Colors.white),
-                              ),
+                            child: Text(
+                              'Monggo',
+                              style:
+                                  TextStyle(fontSize: 20, color: Colors.white),
                             ),
-                          )),
-                        ))
+                          ),
+                        )),
+                      ),
+                    )
                   ],
                 ),
               ),
