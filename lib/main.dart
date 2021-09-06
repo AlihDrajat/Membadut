@@ -60,7 +60,8 @@ class _LoginState extends State<Login> {
       )),
       body: SingleChildScrollView(
         child: Container(
-          height: MediaQuery.of(context).size.width,
+// MediaQuery.of(context).size.width,
+          height: 600,
           color: Colors.lightBlue,
           child: Column(
             children: <Widget>[
@@ -162,6 +163,26 @@ class _LoginState extends State<Login> {
                             ),
                           ),
                         )),
+                      ),
+                    ),
+                    Text(
+                      'Pasangan Pendiri Komunitas Membadut',
+                      style: TextStyle(fontSize: 17),
+                    ),
+                    Container(
+                      height: 255,
+                      child: Row(
+                        children: <Widget>[
+                          Image.asset(
+                            'assets/DSCF6181.jpg',
+                            alignment: Alignment.center,
+                            height: 225,
+                          ),
+                          Image.asset(
+                            'assets/amyaka.jpeg',
+                            height: 225,
+                          ),
+                        ],
                       ),
                     )
                   ],
