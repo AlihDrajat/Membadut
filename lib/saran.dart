@@ -12,7 +12,9 @@ class _SuggestState extends State<Suggest> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(leading: IconButton(
+        appBar: AppBar(
+          backgroundColor: Color.fromARGB(200, 156, 92, 54),
+          leading: IconButton(
             icon: Icon(Icons.arrow_back),
             onPressed: () {
               Navigator.pushReplacement(context,
@@ -21,9 +23,9 @@ class _SuggestState extends State<Suggest> {
               }));
             },
           ),
-        title: Text('Berikan Saranmu ^_^'),
-      ),
-      body: Center(
+          title: Text('Berikan Saranmu ^_^'),
+        ),
+        body: Center(
             child: ElevatedButton(
           child: Text('Halaman Utama'),
           onPressed: () {
@@ -36,7 +38,6 @@ class _SuggestState extends State<Suggest> {
               ),
             );
           },
-        ))
-    );
+        )));
   }
 }

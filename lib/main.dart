@@ -166,7 +166,7 @@ class _LoginState extends State<Login> {
                       ),
                     ),
                     Text(
-                      'Pasangan Pendiri Komunitas Membadut',
+                      'Built By:',
                       style: TextStyle(fontSize: 17),
                     ),
                     Container(

@@ -9,66 +9,69 @@ class Drawers extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Drawer(
-      child: ListView(
-        padding: EdgeInsets.zero,
-        children: <Widget>[
-          _drawerHeader(),
-          _drawerItem(
-            icon: Icons.person,
-            text: 'Tentang Kami',
-            onTap: () {
-              Navigator.pushReplacement(context,
-                  MaterialPageRoute(builder: (context) {
-                return AboutUs();
-              }));
-            },
-          ),
-          _drawerItem(
-            icon: Icons.question_answer_rounded,
-            text: 'Saran dan Bantuan',
-            onTap: () {
-              Navigator.pushReplacement(context,
-                  MaterialPageRoute(builder: (context) {
-                return Suggest();
-              }));
-            },
-          ),
-          _drawerItem(
-            icon: Icons.help_outline_sharp,
-            text: 'FAQ',
-            onTap: () {
-              Navigator.pushReplacement(context,
-                  MaterialPageRoute(builder: (context) {
-                return FAQ();
-              }));
-            },
-          ),
-          _drawerItem(
-            icon: Icons.settings,
-            text: 'Pengaturan',
-            onTap: () => {
-              Navigator.pushReplacement(context,
-                  MaterialPageRoute(builder: (context) {
-                return Setting();
-              })),
-            },
-          ),
-          Divider(height: 25, thickness: 1),
-          _drawerItem(
-            icon: Icons.logout,
-            text: 'Logout',
-            onTap: () {
-              Navigator.pushReplacement(
-                context,
-                MaterialPageRoute(
-                  builder: (context) {
-                    return MyApp();
-                  },
-                ),
-              );
-            },
-          ),
-        ],
+      child: Container(
+        color: Color.fromARGB(200, 42, 45, 49),
+        child: ListView(
+          padding: EdgeInsets.zero,
+          children: <Widget>[
+            _drawerHeader(),
+            _drawerItem(
+              icon: Icons.person,
+              text: 'Tentang Kami',
+              onTap: () {
+                Navigator.pushReplacement(context,
+                    MaterialPageRoute(builder: (context) {
+                  return AboutUs();
+                }));
+              },
+            ),
+            _drawerItem(
+              icon: Icons.question_answer_rounded,
+              text: 'Saran dan Bantuan',
+              onTap: () {
+                Navigator.pushReplacement(context,
+                    MaterialPageRoute(builder: (context) {
+                  return Suggest();
+                }));
+              },
+            ),
+            _drawerItem(
+              icon: Icons.help_outline_sharp,
+              text: 'FAQ',
+              onTap: () {
+                Navigator.pushReplacement(context,
+                    MaterialPageRoute(builder: (context) {
+                  return FAQ();
+                }));
+              },
+            ),
+            _drawerItem(
+              icon: Icons.settings,
+              text: 'Pengaturan',
+              onTap: () => {
+                Navigator.pushReplacement(context,
+                    MaterialPageRoute(builder: (context) {
+                  return Setting();
+                })),
+              },
+            ),
+            Divider(height: 25, thickness: 1),
+            _drawerItem(
+              icon: Icons.logout,
+              text: 'Logout',
+              onTap: () {
+                Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return MyApp();
+                    },
+                  ),
+                );
+              },
+            ),
+          ],
+        ),
       ),
     );
   }
@@ -90,7 +93,7 @@ Widget _drawerHeader() {
       )
     ],
     accountName: Text('CiwiG0'),
-    accountEmail: Text('blablalba@gmail.com'),
+    accountEmail: Text('ayakawangy@mihoyo.com'),
   );
 }
 
@@ -100,7 +103,7 @@ Widget _drawerItem({IconData? icon, String? text, GestureTapCallback? onTap}) {
       children: <Widget>[
         Icon(icon),
         Padding(
-          padding: EdgeInsets.only(left: 25.0),
+          padding: EdgeInsets.only(left: 15.0),
           child: Text(
             text!,
             style: TextStyle(

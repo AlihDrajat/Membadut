@@ -13,6 +13,7 @@ class _SettingState extends State<Setting> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
+          backgroundColor: Color.fromARGB(200, 156, 92, 54),
           leading: IconButton(
             icon: Icon(Icons.arrow_back),
             onPressed: () {
