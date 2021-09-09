@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
 import 'drawer.dart';
 import 'package:convex_bottom_bar/convex_bottom_bar.dart';
+import 'add.dart';
+import 'discovery.dart';
+import 'message.dart';
+import 'profile.dart';
+import 'home.dart';
 
 class Rumah extends StatefulWidget {
   @override
@@ -8,25 +13,16 @@ class Rumah extends StatefulWidget {
 }
 
 class _RumahState extends State<Rumah> {
+  int selectedIndex = 0;
+  List<Widget> listWidgets = [Home(), Discovery(), Add(), Message(), Profile()];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Color.fromARGB(200, 156, 92, 54),
-        title: Text('Home'),
-      ),
       drawer: Drawers(),
-      body: Center(
-        child: Column(
-          children: <Widget>[
-            Text(
-              'Selamat Datang',
-              style: TextStyle(fontSize: 20),
-            ),
-          ],
-        ),
-      ),
-      bottomNavigationBar: ConvexAppBar(
+      body: listWidgets[selectedIndex],
+      bottomNavigationBar: ConvexAppBar.badge(
+        {3: '21'},
         style: TabStyle.react,
         gradient: LinearGradient(
           begin: Alignment.topLeft,
@@ -38,6 +34,7 @@ class _RumahState extends State<Rumah> {
         ),
         color: Color.fromARGB(200, 100, 45, 16),
         activeColor: Colors.brown,
+        initialActiveIndex: selectedIndex,
         items: [
           TabItem(icon: Icons.home, title: 'Home'),
           TabItem(icon: Icons.map, title: 'Discovery'),
@@ -45,7 +42,14 @@ class _RumahState extends State<Rumah> {
           TabItem(icon: Icons.message, title: 'Message'),
           TabItem(icon: Icons.people, title: 'Profile'),
         ],
+        onTap: onTap,
       ),
     );
+  }
+
+  void onTap(int index) {
+    setState(() {
+      selectedIndex = index;
+    });
   }
 }

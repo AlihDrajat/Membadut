@@ -25,19 +25,9 @@ class _FAQState extends State<FAQ> {
           ),
           title: Text('FAQ'),
         ),
-        body: Center(
-            child: ElevatedButton(
-          child: Text('Halaman Utama'),
-          onPressed: () {
-            Navigator.pushReplacement(
-              context,
-              MaterialPageRoute(
-                builder: (context) {
-                  return Rumah();
-                },
-              ),
-            );
-          },
-        )));
+        body: Container(
+          color: Color.fromARGB(200, 42, 45, 49),
+          child: Center(),
+        ));
   }
 }

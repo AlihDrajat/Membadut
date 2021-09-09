@@ -25,19 +25,7 @@ class _SuggestState extends State<Suggest> {
           ),
           title: Text('Berikan Saranmu ^_^'),
         ),
-        body: Center(
-            child: ElevatedButton(
-          child: Text('Halaman Utama'),
-          onPressed: () {
-            Navigator.pushReplacement(
-              context,
-              MaterialPageRoute(
-                builder: (context) {
-                  return Rumah();
-                },
-              ),
-            );
-          },
-        )));
+        body:
+            Container(color: Color.fromARGB(200, 42, 45, 49), child: Center()));
   }
 }

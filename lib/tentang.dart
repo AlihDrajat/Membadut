@@ -25,7 +25,9 @@ class _AboutUsState extends State<AboutUs> {
         ),
         title: Text('Tentang Kami'),
       ),
-      body: Center(child: Text('About Us')),
+      body: Container(
+          color: Color.fromARGB(200, 42, 45, 49),
+          child: Center(child: Text('About Us'))),
     );
   }
 }
