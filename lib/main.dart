@@ -1,22 +1,14 @@
-import 'dart:math';
-
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:login_cenah/rumah.dart';
 
 final List<String> imgList = [
-// Diluc
-  'https://images.alphacoders.com/110/1109227.jpg',
-// Lisa
-  'https://images4.alphacoders.com/110/1107815.jpg',
 // Zhongli Lantern Rite
-  'https://images6.alphacoders.com/113/1132140.png',
+  'assets/Zhongli.png',
 // Windrise
-  'https://images3.alphacoders.com/112/1123012.jpg',
+  'assets/Windrise.jpg',
 // Fish Blasting
-  'https://images8.alphacoders.com/110/1109289.jpg',
-  // Fatui
-  'https://images7.alphacoders.com/113/1132533.jpg'
+  'assets/FishBlast.jpg',
 ];
 
 void main() => runApp(MyApp());
@@ -218,7 +210,7 @@ class _LoginState extends State<Login> {
                           items: imgList
                               .map((item) => Container(
                                     child: Center(
-                                        child: Image.network(item,
+                                        child: Image.asset(item,
                                             fit: BoxFit.cover, width: 1000)),
                                   ))
                               .toList(),
@@ -254,26 +246,13 @@ class _LoginState extends State<Login> {
 }
 
 class ItemCard extends StatelessWidget {
-  final String title;
-
-  const ItemCard({Key? key, required this.title}) : super(key: key);
+  const ItemCard({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Container(
       width: MediaQuery.of(context).size.width * 0.9,
       height: MediaQuery.of(context).size.height * 0.7,
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(20),
-        color:
-            Color((Random().nextDouble() * 0xFFFFFF).toInt()).withOpacity(1.0),
-        boxShadow: [
-          BoxShadow(color: Colors.black.withOpacity(0.4), blurRadius: 2),
-        ],
-      ),
-      child: Center(
-        child: Text(title),
-      ),
     );
   }
 }

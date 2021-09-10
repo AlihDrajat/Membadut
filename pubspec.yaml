@@ -53,13 +53,15 @@ flutter:
   # To add Flutter specific assets to your application, add an assets section,
   # like this:
   assets:
-    - assets/mwehehe.jpg
     - assets/sddefault.jpg
-    - assets/WHO TAO.jpg
     - assets/DSCF6181.jpg
     - assets/istri.jpg
-    - assets/membadut.jpg
-    - assets/amyaka.jpeg
+    - assets/Diluc.jpg
+    - assets/Fatui.jpg
+    - assets/FishBlast.jpg
+    - assets/Lisa.jpg
+    - assets/Windrise.jpg
+    - assets/Zhongli.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
