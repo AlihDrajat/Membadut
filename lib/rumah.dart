@@ -3,7 +3,7 @@ import 'drawer.dart';
 import 'package:convex_bottom_bar/convex_bottom_bar.dart';
 import 'add.dart';
 import 'discovery.dart';
-import 'message.dart';
+import 'chatscreen.dart';
 import 'profile.dart';
 import 'home.dart';
 
@@ -14,7 +14,13 @@ class Rumah extends StatefulWidget {
 
 class _RumahState extends State<Rumah> {
   int selectedIndex = 0;
-  List<Widget> listWidgets = [Home(), Discovery(), Add(), Message(), Profile()];
+  List<Widget> listWidgets = [
+    Home(),
+    Discovery(),
+    Add(),
+    ChatScreen(),
+    Profile()
+  ];
 
   @override
   Widget build(BuildContext context) {
