@@ -34,8 +34,8 @@ class _RumahState extends State<Rumah> {
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
           colors: [
-            Color.fromARGB(200, 255, 160, 55),
-            Color.fromARGB(200, 186, 100, 70),
+            Color.fromARGB(230, 255, 160, 55),
+            Color.fromARGB(230, 186, 100, 70),
           ],
         ),
         color: Color.fromARGB(200, 100, 45, 16),

@@ -205,7 +205,7 @@ class _ProfileState extends State<Profile> {
         title: Text('Profile'),
       ),
       body: Container(
-        color: Color.fromARGB(255, 58, 62, 65),
+        color: Color.fromARGB(255, 88, 92, 95),
         child: Stack(
           children: <Widget>[
             _buildCoverImage(screenSize),

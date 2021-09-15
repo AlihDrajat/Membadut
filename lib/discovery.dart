@@ -13,7 +13,7 @@ class Discovery extends StatelessWidget {
         title: Text('Discovery'),
       ),
       body: Container(
-        color: Color.fromARGB(255, 58, 62, 65),
+        color: Color.fromARGB(255, 88, 92, 95),
         child: Center(
           child: Text('Discovery'),
         ),

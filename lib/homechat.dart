@@ -138,7 +138,7 @@ class _HomeChatState extends State<HomeChat> {
           Expanded(
             child: Container(
               decoration: BoxDecoration(
-                color: Color.fromARGB(255, 58, 62, 65),
+                color: Color.fromARGB(255, 88, 92, 95),
                 borderRadius: BorderRadius.only(
                   topLeft: Radius.circular(30),
                   topRight: Radius.circular(30),

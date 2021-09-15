@@ -13,7 +13,7 @@ class Add extends StatelessWidget {
         title: Text('Add'),
       ),
       body: Container(
-        color: Color.fromARGB(255, 58, 62, 65),
+        color: Color.fromARGB(255, 88, 92, 95),
         child: Center(
           child: Text('Add'),
         ),
