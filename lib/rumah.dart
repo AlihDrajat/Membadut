@@ -3,7 +3,7 @@ import 'drawer.dart';
 import 'package:convex_bottom_bar/convex_bottom_bar.dart';
 import 'add.dart';
 import 'discovery.dart';
-import 'chatscreen.dart';
+import 'homechat.dart';
 import 'profile.dart';
 import 'home.dart';
 
@@ -18,7 +18,7 @@ class _RumahState extends State<Rumah> {
     Home(),
     Discovery(),
     Add(),
-    ChatScreen(),
+    HomeChat(),
     Profile()
   ];
 

@@ -26,6 +26,6 @@ class _SettingState extends State<Setting> {
           title: Text('Pengaturan'),
         ),
         body:
-            Container(color: Color.fromARGB(200, 42, 45, 49), child: Center()));
+            Container(color: Color.fromARGB(255, 58, 62, 65), child: Center()));
   }
 }

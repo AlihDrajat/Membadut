@@ -26,7 +26,7 @@ class _FAQState extends State<FAQ> {
           title: Text('FAQ'),
         ),
         body: Container(
-          color: Color.fromARGB(200, 42, 45, 49),
+          color: Color.fromARGB(255, 58, 62, 65),
           child: Center(),
         ));
   }

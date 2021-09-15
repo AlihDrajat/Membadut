@@ -47,7 +47,7 @@ class _ProfileState extends State<Profile> {
 
   Widget _buildName() {
     TextStyle _nameTextStyle = TextStyle(
-      color: Colors.black,
+      color: Colors.white,
       fontSize: 25,
       fontWeight: FontWeight.w700,
     );
@@ -59,7 +59,7 @@ class _ProfileState extends State<Profile> {
 
   Widget _buildBirth() {
     TextStyle _birthTextStyle = TextStyle(
-      color: Colors.black,
+      color: Colors.white,
       fontSize: 17,
       fontWeight: FontWeight.w200,
     );
@@ -69,9 +69,7 @@ class _ProfileState extends State<Profile> {
         children: <Widget>[
           Text(
             'Date of Birth',
-            style: TextStyle(
-              fontSize: 13,
-            ),
+            style: TextStyle(fontSize: 13, color: Colors.white),
           ),
           Text(
             _dateBirth,
@@ -94,7 +92,7 @@ class _ProfileState extends State<Profile> {
       child: Text(
         _status,
         style: TextStyle(
-          color: Colors.black,
+          color: Colors.white,
           fontSize: 17,
           fontWeight: FontWeight.w300,
         ),
@@ -109,11 +107,12 @@ class _ProfileState extends State<Profile> {
         children: <Widget>[
           Text(
             'Posts',
-            style: TextStyle(fontSize: 13),
+            style: TextStyle(fontSize: 13, color: Colors.white),
           ),
           Text(
             _post,
-            style: TextStyle(fontSize: 17, fontWeight: FontWeight.w200),
+            style: TextStyle(
+                color: Colors.white, fontSize: 17, fontWeight: FontWeight.w200),
           )
         ],
       ),
@@ -127,11 +126,11 @@ class _ProfileState extends State<Profile> {
         children: <Widget>[
           Text(
             'Server',
-            style: TextStyle(fontSize: 13, color: Colors.black),
+            style: TextStyle(fontSize: 13, color: Colors.white),
           ),
           Text(
             _server,
-            style: TextStyle(fontSize: 17),
+            style: TextStyle(color: Colors.white, fontSize: 17),
           ),
         ],
       ),
@@ -145,11 +144,11 @@ class _ProfileState extends State<Profile> {
         children: <Widget>[
           Text(
             'Adventure Rank',
-            style: TextStyle(fontSize: 13, color: Colors.black),
+            style: TextStyle(fontSize: 13, color: Colors.white),
           ),
           Text(
             _rank,
-            style: TextStyle(fontSize: 17),
+            style: TextStyle(color: Colors.white, fontSize: 17),
           )
         ],
       ),
@@ -164,12 +163,14 @@ class _ProfileState extends State<Profile> {
           Text(
             'Follower',
             style: TextStyle(
+              color: Colors.white,
               fontSize: 13,
             ),
           ),
           Text(
             _follower,
-            style: TextStyle(fontSize: 17, fontWeight: FontWeight.w200),
+            style: TextStyle(
+                color: Colors.white, fontSize: 17, fontWeight: FontWeight.w200),
           ),
         ],
       ),
@@ -183,13 +184,11 @@ class _ProfileState extends State<Profile> {
         children: <Widget>[
           Text(
             'Following',
-            style: TextStyle(
-              fontSize: 13,
-            ),
+            style: TextStyle(fontSize: 13, color: Colors.white),
           ),
           Text(
             _following,
-            style: TextStyle(fontSize: 17),
+            style: TextStyle(color: Colors.white, fontSize: 17),
           ),
         ],
       ),
@@ -206,7 +205,7 @@ class _ProfileState extends State<Profile> {
         title: Text('Profile'),
       ),
       body: Container(
-        color: Color.fromARGB(200, 42, 45, 49),
+        color: Color.fromARGB(255, 58, 62, 65),
         child: Stack(
           children: <Widget>[
             _buildCoverImage(screenSize),
