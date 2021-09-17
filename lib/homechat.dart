@@ -150,7 +150,7 @@ class _HomeChatState extends State<HomeChat> {
                 ),
                 child: Container(
                   margin: EdgeInsets.only(
-                    top: 2,
+                    top: 3,
                     bottom: 5,
                   ),
                   padding: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
@@ -240,9 +240,9 @@ class _HomeChatState extends State<HomeChat> {
         title: Text(
           'Message',
           textAlign: TextAlign.center,
-          style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
+          style: TextStyle(fontSize: 23, fontWeight: FontWeight.bold),
         ),
-        elevation: 1.0,
+        elevation: 5,
         actions: <Widget>[
           IconButton(
             icon: Icon(Icons.search),

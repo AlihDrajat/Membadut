@@ -2,11 +2,13 @@ class User {
   final int id;
   final String name;
   final String imageUrl;
+  final String lastSeen;
 
   User({
     required this.id,
     required this.name,
     required this.imageUrl,
+    required this.lastSeen,
   });
 
   get user => null;
@@ -34,6 +36,7 @@ final User currentUser = User(
   id: 0,
   name: 'CiwiG0',
   imageUrl: 'assets/ciwi.jpg',
+  lastSeen: '',
 );
 
 // USERS
@@ -41,51 +44,61 @@ final User ayaka = User(
   id: 1,
   name: 'Calonku',
   imageUrl: 'assets/ayaka.jpg',
+  lastSeen: 'last seen today at 7.29 PM ',
 );
 final User raidenEi = User(
   id: 2,
-  name: 'Raiden Ei',
+  name: 'Chef Ei',
   imageUrl: 'assets/Ei.jpeg',
+  lastSeen: 'last seen today at 1:20 PM ',
 );
 final User eula = User(
   id: 3,
   name: 'Eula',
   imageUrl: 'assets/eula.jpeg',
+  lastSeen: 'last seen today at 5:00 Am',
 );
 final User hutao = User(
   id: 4,
   name: 'Kang Peti',
   imageUrl: 'assets/hutao.jpeg',
+  lastSeen: 'last seen today at 0:48 AM',
 );
 final User ganyu = User(
   id: 5,
   name: 'Qurban',
   imageUrl: 'assets/ganyu.jpeg',
+  lastSeen: 'last seen Yesterday',
 );
 final User yanfei = User(
   id: 6,
   name: 'Yanfei',
   imageUrl: 'assets/yanfei.jpeg',
+  lastSeen: 'last seen today at 5:30 PM',
 );
 final User yoimiya = User(
   id: 7,
   name: 'Peledak Handal',
   imageUrl: 'assets/yoimiya.jpeg',
+  lastSeen: 'last seen today at 7:02 AM',
 );
 final User zhongli = User(
   id: 8,
   name: 'No Mora(x)',
   imageUrl: 'assets/zhongli.jpeg',
+  lastSeen: 'last seen a week ago',
 );
 final User albedo = User(
   id: 9,
   name: 'Pamannya klee',
   imageUrl: 'assets/albedo.jpeg',
+  lastSeen: 'last seen today at 5:51 PM',
 );
 final User xiao = User(
   id: 10,
-  name: 'Xiao',
+  name: 'Manusia adalah Alat',
   imageUrl: 'assets/xiao.jpeg',
+  lastSeen: 'last seen today at 7:40 PM',
 );
 
 List<User> favorites = [ayaka, hutao, ganyu, yoimiya, albedo, zhongli];
@@ -116,6 +129,13 @@ List<Message> chats = [
   Message(
     sender: albedo,
     time: '5:49 PM',
+    text: 'Wassup, let\'s swim in dragonspine. Today so hot ',
+    isLiked: false,
+    unread: true,
+  ),
+  Message(
+    sender: yanfei,
+    time: '5:21 PM',
     text: 'Wassup, let\'s swim in dragonspine. Today so hot ',
     isLiked: false,
     unread: true,
