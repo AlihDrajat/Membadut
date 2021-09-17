@@ -21,7 +21,7 @@ class _HomeChatState extends State<HomeChat> {
     int selectedIndex = 0;
 
     return Container(
-        height: 90,
+        height: 75,
         color: Color.fromARGB(255, 156, 92, 54),
         child: ListView.builder(
             scrollDirection: Axis.horizontal,
@@ -34,7 +34,7 @@ class _HomeChatState extends State<HomeChat> {
                   });
                 },
                 child: Padding(
-                  padding: EdgeInsets.symmetric(vertical: 30, horizontal: 15),
+                  padding: EdgeInsets.symmetric(vertical: 23, horizontal: 15),
                   child: Text(
                     categories[index],
                     style: TextStyle(
@@ -77,8 +77,9 @@ class _HomeChatState extends State<HomeChat> {
           ),
         ),
         Container(
-          height: 120,
+          height: 116,
           child: ListView.builder(
+              padding: EdgeInsets.only(left: 10),
               scrollDirection: Axis.horizontal,
               itemCount: favorites.length,
               // ignore: non_constant_identifier_names
@@ -107,15 +108,108 @@ class _HomeChatState extends State<HomeChat> {
         Divider(
           thickness: 1,
           color: Color.fromARGB(200, 156, 92, 54),
-        )
+        ),
       ],
+    );
+  }
+
+  Widget _buildRecentChat() {
+    return Expanded(
+      child: Container(
+        child: ClipRRect(
+          borderRadius: BorderRadius.only(
+            topRight: Radius.circular(20),
+            topLeft: Radius.circular(20),
+          ),
+          child: ListView.builder(
+            itemCount: chats.length,
+            itemBuilder: (BuildContext context, int index) {
+              return Container(
+                margin: EdgeInsets.only(
+                  top: 2,
+                  bottom: 5,
+                ),
+                padding: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+                decoration: BoxDecoration(
+                  color: chats[index].unread
+                      ? Color.fromARGB(255, 75, 79, 82)
+                      : Color.fromARGB(255, 88, 92, 95),
+                  borderRadius: BorderRadius.only(
+                    topRight: Radius.circular(20),
+                    bottomRight: Radius.circular(20),
+                  ),
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: <Widget>[
+                    Row(
+                      children: <Widget>[
+                        CircleAvatar(
+                          radius: 30,
+                          backgroundImage:
+                              AssetImage(chats[index].sender.imageUrl),
+                        ),
+                        SizedBox(
+                          width: 8,
+                        ),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(chats[index].sender.name,
+                                style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 15,
+                                    color: Colors.white)),
+                            SizedBox(
+                              height: 5,
+                            ),
+                            Container(
+                              width: MediaQuery.of(context).size.width * 0.58,
+                              child: Text(
+                                chats[index].text,
+                                style: TextStyle(
+                                    fontWeight: FontWeight.w600,
+                                    fontSize: 15,
+                                    color: Colors.black),
+                                overflow: TextOverflow.ellipsis,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                    Column(
+                      children: <Widget>[
+                        Text(chats[index].time),
+                        SizedBox(
+                          height: 5,
+                        ),
+                        chats[index].unread
+                            ? Container(
+                                width: 40,
+                                height: 20,
+                                decoration: BoxDecoration(
+                                    color: Colors.red,
+                                    borderRadius: BorderRadius.circular(30)),
+                                alignment: Alignment.center,
+                                child: Text('NEW'))
+                            : SizedBox.shrink(),
+                      ],
+                    ),
+                  ],
+                ),
+              );
+            },
+          ),
+        ),
+      ),
     );
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(252, 156, 92, 54),
+      backgroundColor: Color.fromARGB(255, 156, 92, 54),
       drawer: Drawers(),
       appBar: AppBar(
         backgroundColor: Color.fromARGB(200, 156, 92, 54),
@@ -140,13 +234,13 @@ class _HomeChatState extends State<HomeChat> {
               decoration: BoxDecoration(
                 color: Color.fromARGB(255, 88, 92, 95),
                 borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(30),
-                  topRight: Radius.circular(30),
-                ),
+                    topLeft: Radius.circular(30),
+                    topRight: Radius.circular(30)),
               ),
               child: Column(
                 children: <Widget>[
                   _buildFavorite(),
+                  _buildRecentChat(),
                 ],
               ),
             ),
