@@ -8,6 +8,8 @@ class User {
     required this.name,
     required this.imageUrl,
   });
+
+  get user => null;
 }
 
 class Message {
@@ -85,7 +87,7 @@ final User xiao = User(
   name: 'Xiao',
   imageUrl: 'assets/xiao.jpeg',
 );
-// FAVORITE CONTACTS
+
 List<User> favorites = [ayaka, hutao, ganyu, yoimiya, albedo, zhongli];
 
 // EXAMPLE CHATS ON HOME SCREEN
