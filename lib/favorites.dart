@@ -16,8 +16,7 @@ class User {
 
 class Message {
   final User sender;
-  final String
-      time; // Would usually be type DateTime or Firebase Timestamp in production apps
+  final String time;
   final String text;
   final bool isLiked;
   final bool unread;
@@ -31,7 +30,6 @@ class Message {
   });
 }
 
-// YOU - current user
 final User currentUser = User(
   id: 0,
   name: 'CiwiG0',
@@ -39,7 +37,6 @@ final User currentUser = User(
   lastSeen: '',
 );
 
-// USERS
 final User ayaka = User(
   id: 1,
   name: 'Calonku',
@@ -84,7 +81,7 @@ final User yoimiya = User(
 );
 final User zhongli = User(
   id: 8,
-  name: 'No Mora(x)',
+  name: 'Exuvia',
   imageUrl: 'assets/zhongli.jpeg',
   lastSeen: 'last seen a week ago',
 );
@@ -103,7 +100,6 @@ final User xiao = User(
 
 List<User> favorites = [ayaka, hutao, ganyu, yoimiya, albedo, zhongli];
 
-// EXAMPLE CHATS ON HOME SCREEN
 List<Message> chats = [
   Message(
     sender: ayaka,
@@ -177,47 +173,60 @@ List<Message> chats = [
   ),
 ];
 
-// EXAMPLE MESSAGES IN CHAT SCREEN
 List<Message> messages = [
+  Message(
+    sender: currentUser,
+    time: '5:32 PM',
+    text: 'Okayy have fun',
+    isLiked: false,
+    unread: false,
+  ),
   Message(
     sender: ayaka,
     time: '5:30 PM',
-    text: 'Hey, how\'s it going? What did you do today?',
+    text: 'I just took a bath. Then i want to read novel, catch ya later....',
     isLiked: true,
     unread: true,
   ),
   Message(
     sender: currentUser,
     time: '4:30 PM',
-    text: 'Just walked my doge. She was super duper cute. The best pupper!!',
+    text: 'Ehe...how about you?what are you doing',
     isLiked: false,
     unread: true,
   ),
   Message(
     sender: ayaka,
     time: '3:45 PM',
-    text: 'How\'s the doggo?',
+    text: 'Aaaaa thats sweet...',
     isLiked: false,
-    unread: true,
-  ),
-  Message(
-    sender: ayaka,
-    time: '3:15 PM',
-    text: 'All the food',
-    isLiked: true,
     unread: true,
   ),
   Message(
     sender: currentUser,
+    time: '3:15 PM',
+    text: 'About you of course ^_^',
+    isLiked: true,
+    unread: true,
+  ),
+  Message(
+    sender: ayaka,
     time: '2:30 PM',
-    text: 'Nice! What kind of food did you eat?',
+    text: 'Waaaa what did you dream about??',
+    isLiked: false,
+    unread: true,
+  ),
+  Message(
+    sender: currentUser,
+    time: '2:00 PM',
+    text: 'Just woke up from my best dream',
     isLiked: false,
     unread: true,
   ),
   Message(
     sender: ayaka,
-    time: '2:00 PM',
-    text: 'I ate so much food today.',
+    time: '1.55 PM',
+    text: 'Hello honey...how\'s going?',
     isLiked: false,
     unread: true,
   ),
