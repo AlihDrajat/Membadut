@@ -9,7 +9,7 @@ class Discovery extends StatelessWidget {
     return Scaffold(
       drawer: Drawers(),
       appBar: AppBar(
-        backgroundColor: Color.fromARGB(200, 156, 92, 54),
+        backgroundColor: Color.fromARGB(255, 156, 92, 54),
         title: Text('Discovery'),
       ),
       body: Container(

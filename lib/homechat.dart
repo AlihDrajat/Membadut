@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:login_cenah/chatscreen.dart';
+import 'MessageBar/MessageTab/chatScreen.dart';
 import 'drawer.dart';
-import 'favorites.dart';
+import 'MessageBar/MessageTab/favorites.dart';
 
 class HomeChat extends StatefulWidget {
   const HomeChat({Key? key}) : super(key: key);
-
-  get user => null;
 
   @override
   _HomeChatState createState() => _HomeChatState();
@@ -22,37 +20,35 @@ class _HomeChatState extends State<HomeChat> {
 
   get user => null;
 
-  Widget _buildCategories(BuildContext context) {
-    int selectedIndex = 0;
-
-    return Container(
-        height: 75,
-        color: Color.fromARGB(255, 156, 92, 54),
-        child: ListView.builder(
-            scrollDirection: Axis.horizontal,
-            itemCount: categories.length,
-            itemBuilder: (BuildContext context, int index) {
-              return GestureDetector(
-                onTap: () {
-                  setState(() {
-                    selectedIndex = index;
-                  });
-                },
-                child: Padding(
-                  padding: EdgeInsets.symmetric(vertical: 23, horizontal: 15),
-                  child: Text(
-                    categories[index],
-                    style: TextStyle(
-                        color: index == selectedIndex
-                            ? Colors.white
-                            : Colors.white60,
-                        fontSize: 17,
-                        fontWeight: FontWeight.bold,
-                        letterSpacing: 1.1),
-                  ),
-                ),
-              );
-            }));
+  Widget _buildTabBar(BuildContext context) {
+    return TabBar(
+      tabs: <Widget>[
+        Tab(
+          child: Text(
+            'Message',
+            style: TextStyle(fontSize: 17),
+          ),
+        ),
+        Tab(
+          child: Text(
+            'Groups',
+            style: TextStyle(fontSize: 17),
+          ),
+        ),
+        Tab(
+          child: Text(
+            'Calls',
+            style: TextStyle(fontSize: 17),
+          ),
+        ),
+        Tab(
+          child: Text(
+            'Friend Request',
+            style: TextStyle(fontSize: 17),
+          ),
+        ),
+      ],
+    );
   }
 
   Widget _buildFavorite() {
@@ -230,46 +226,63 @@ class _HomeChatState extends State<HomeChat> {
     );
   }
 
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Color.fromARGB(255, 156, 92, 54),
-      drawer: Drawers(),
-      appBar: AppBar(
-        backgroundColor: Color.fromARGB(200, 156, 92, 54),
-        title: Text(
-          'Message',
-          textAlign: TextAlign.center,
-          style: TextStyle(fontSize: 23, fontWeight: FontWeight.bold),
-        ),
-        elevation: 5,
-        actions: <Widget>[
-          IconButton(
-            icon: Icon(Icons.search),
-            onPressed: () {},
-          ),
-        ],
-      ),
-      body: Column(
-        children: <Widget>[
-          _buildCategories(context),
-          Expanded(
-            child: Container(
-              decoration: BoxDecoration(
-                color: Color.fromARGB(255, 88, 92, 95),
-                borderRadius: BorderRadius.only(
-                    topLeft: Radius.circular(30),
-                    topRight: Radius.circular(30)),
-              ),
-              child: Column(
-                children: <Widget>[
-                  _buildFavorite(),
-                  _buildRecentChat(),
-                ],
-              ),
+  Widget _buildChatUI() {
+    return Column(
+      children: <Widget>[
+        Expanded(
+          child: Container(
+            decoration: BoxDecoration(
+              color: Color.fromARGB(255, 88, 92, 95),
+              borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(30), topRight: Radius.circular(30)),
+            ),
+            child: Column(
+              children: <Widget>[
+                _buildFavorite(),
+                _buildRecentChat(),
+              ],
             ),
           ),
-        ],
+        ),
+      ],
+    );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return DefaultTabController(
+      length: categories.length,
+      child: Scaffold(
+        backgroundColor: Color.fromARGB(255, 156, 92, 54),
+        drawer: Drawers(),
+        appBar: AppBar(
+          elevation: 3,
+          backgroundColor: Color.fromARGB(200, 156, 92, 54),
+          title: Text(
+            'Social',
+            textAlign: TextAlign.center,
+            style: TextStyle(fontSize: 23, fontWeight: FontWeight.bold),
+          ),
+          actions: <Widget>[
+            IconButton(
+              icon: Icon(Icons.search),
+              onPressed: () {},
+            ),
+          ],
+          bottom: PreferredSize(
+              preferredSize: Size.fromHeight(70),
+              child: Container(
+                child: _buildTabBar(context),
+              )),
+        ),
+        body: TabBarView(
+          children: <Widget>[
+            _buildChatUI(),
+            Text('a'),
+            Text('b'),
+            Text('c'),
+          ],
+        ),
       ),
     );
   }
