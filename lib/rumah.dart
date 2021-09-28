@@ -3,7 +3,7 @@ import 'drawer.dart';
 import 'package:convex_bottom_bar/convex_bottom_bar.dart';
 import 'add.dart';
 import 'discovery.dart';
-import 'homechat.dart';
+import 'MessageBar/MessageTab/homechat.dart';
 import 'profile.dart';
 import 'home.dart';
 
