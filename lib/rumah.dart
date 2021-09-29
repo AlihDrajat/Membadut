@@ -4,7 +4,7 @@ import 'package:convex_bottom_bar/convex_bottom_bar.dart';
 import 'add.dart';
 import 'discovery.dart';
 import 'MessageBar/MessageTab/homechat.dart';
-import 'profile.dart';
+import 'ProfileBar/profile.dart';
 import 'home.dart';
 
 class Rumah extends StatefulWidget {
