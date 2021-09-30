@@ -48,6 +48,8 @@ class _SocialUIState extends State<SocialUI> {
   @override
   Widget build(BuildContext context) {
     TabBar myTabBar = TabBar(
+      isScrollable: true,
+      unselectedLabelColor: Colors.white.withOpacity(0.3),
       indicatorColor: Colors.white,
       tabs: <Widget>[
         Tab(

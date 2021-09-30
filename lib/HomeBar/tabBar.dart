@@ -8,39 +8,40 @@ class HomeCategories extends StatefulWidget {
 }
 
 class _HomeCategoriesState extends State<HomeCategories> {
-  final List<String> categories = [
-    'Home',
-    'Following',
-    'Guides',
-    'EVents',
-    'Quiz',
-  ];
-
   @override
   Widget build(BuildContext context) {
     return TabBar(
+      isScrollable: true,
+      unselectedLabelColor: Colors.white.withOpacity(0.3),
+      indicatorColor: Colors.white,
       tabs: <Widget>[
         Tab(
           child: Text(
-            'Message',
+            'Home',
             style: TextStyle(fontSize: 17),
           ),
         ),
         Tab(
           child: Text(
-            'Groups',
+            'Following',
             style: TextStyle(fontSize: 17),
           ),
         ),
         Tab(
           child: Text(
-            'Calls',
+            'Guides',
             style: TextStyle(fontSize: 17),
           ),
         ),
         Tab(
           child: Text(
-            'Friend Request',
+            'Events',
+            style: TextStyle(fontSize: 17),
+          ),
+        ),
+        Tab(
+          child: Text(
+            'Quiz',
             style: TextStyle(fontSize: 17),
           ),
         ),

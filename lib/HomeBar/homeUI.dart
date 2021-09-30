@@ -11,7 +11,13 @@ class HomeUI extends StatefulWidget {
 }
 
 class _HomeUIState extends State<HomeUI> {
-  final List<String> categories = [];
+  final List<String> categories = [
+    'Home',
+    'Following',
+    'Guides',
+    'Events',
+    'Quiz',
+  ];
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
@@ -41,9 +47,11 @@ class _HomeUIState extends State<HomeUI> {
         ),
         body: TabBarView(
           children: <Widget>[
-            Text('a'),
-            Text('b'),
-            Text('c'),
+            Text('Home'),
+            Text('Following'),
+            Text('Guide'),
+            Text('Events'),
+            Text('Quiz'),
           ],
         ),
       ),

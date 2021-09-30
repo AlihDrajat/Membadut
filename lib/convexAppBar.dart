@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'AddBar/add.dart';
+import 'HomeBar/homeUI.dart';
 import 'SocialBar/SocialUI.dart';
 import 'Drawer/drawer.dart';
 import 'package:convex_bottom_bar/convex_bottom_bar.dart';
@@ -7,7 +8,6 @@ import 'package:convex_bottom_bar/convex_bottom_bar.dart';
 import 'DiscoveryBar/discovery.dart';
 
 import 'ProfileBar/profile.dart';
-import 'home.dart';
 
 class Rumah extends StatefulWidget {
   @override
@@ -17,7 +17,7 @@ class Rumah extends StatefulWidget {
 class _RumahState extends State<Rumah> {
   int selectedIndex = 0;
   List<Widget> listWidgets = [
-    Home(),
+    HomeUI(),
     Discovery(),
     Add(),
     SocialUI(),
