@@ -1,20 +1,13 @@
 import 'package:flutter/material.dart';
 
-class Categories extends StatefulWidget {
-  const Categories({Key? key, List<Widget>? tabs}) : super(key: key);
+class HomeCategories extends StatefulWidget {
+  const HomeCategories({Key? key}) : super(key: key);
 
   @override
-  _CategoriesState createState() => _CategoriesState();
+  _HomeCategoriesState createState() => _HomeCategoriesState();
 }
 
-class _CategoriesState extends State<Categories> {
-  final List<String> categories = [
-    'Message',
-    'Groups',
-    'Calls',
-    'Friend Request'
-  ];
-
+class _HomeCategoriesState extends State<HomeCategories> {
   @override
   Widget build(BuildContext context) {
     return TabBar(

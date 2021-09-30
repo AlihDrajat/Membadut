@@ -1,46 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:login_cenah/MessageBar/MessageTab/favContact.dart';
-import '../../drawer.dart';
-import 'recent.dart';
+
+import '../drawer.dart';
 import 'tabBar.dart';
 
-class HomeChat extends StatefulWidget {
-  const HomeChat({Key? key}) : super(key: key);
+class HomeUI extends StatefulWidget {
+  const HomeUI({Key? key}) : super(key: key);
 
   @override
-  _HomeChatState createState() => _HomeChatState();
+  _HomeUIState createState() => _HomeUIState();
 }
 
-class _HomeChatState extends State<HomeChat> {
-  final List<String> categories = [
-    'Message',
-    'Groups',
-    'Calls',
-    'Friend Request'
-  ];
-
-  Widget _buildChatUI() {
-    return Column(
-      children: <Widget>[
-        Expanded(
-          child: Container(
-            decoration: BoxDecoration(
-              color: Color.fromARGB(255, 88, 92, 95),
-              borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(30), topRight: Radius.circular(30)),
-            ),
-            child: Column(
-              children: <Widget>[
-                FavContact(),
-                RecentChat(),
-              ],
-            ),
-          ),
-        ),
-      ],
-    );
-  }
-
+class _HomeUIState extends State<HomeUI> {
+  final List<String> categories = [];
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
@@ -65,12 +36,11 @@ class _HomeChatState extends State<HomeChat> {
           bottom: PreferredSize(
               preferredSize: Size.fromHeight(70),
               child: Container(
-                child: Categories(),
+                child: HomeCategories(),
               )),
         ),
         body: TabBarView(
           children: <Widget>[
-            _buildChatUI(),
             Text('a'),
             Text('b'),
             Text('c'),
