@@ -8,6 +8,14 @@ class HomeCategories extends StatefulWidget {
 }
 
 class _HomeCategoriesState extends State<HomeCategories> {
+  final List<String> categories = [
+    'Home',
+    'Following',
+    'Guides',
+    'EVents',
+    'Quiz',
+  ];
+
   @override
   Widget build(BuildContext context) {
     return TabBar(

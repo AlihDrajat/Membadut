@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'SocialBar/SocialUI.dart';
 import 'drawer.dart';
 import 'package:convex_bottom_bar/convex_bottom_bar.dart';
 import 'add.dart';
 import 'discovery.dart';
-import 'SocialBar/MessageTab/homeMessage.dart';
+
 import 'ProfileBar/profile.dart';
 import 'home.dart';
 
@@ -18,7 +19,7 @@ class _RumahState extends State<Rumah> {
     Home(),
     Discovery(),
     Add(),
-    HomeChat(),
+    SocialUI(),
     Profile()
   ];
 
