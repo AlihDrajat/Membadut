@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
-import 'AddBar/add.dart';
-import 'HomeBar/homeUI.dart';
-import 'SocialBar/SocialUI.dart';
-import 'Drawer/drawer.dart';
+import '../AddBar/add.dart';
+import '../HomeBar/homeUI.dart';
+import '../SocialBar/SocialUI.dart';
+import '../Drawer/drawer.dart';
 import 'package:convex_bottom_bar/convex_bottom_bar.dart';
 
-import 'DiscoveryBar/discovery.dart';
+import '../DiscoveryBar/discovery.dart';
 
-import 'ProfileBar/profile.dart';
+import '../ProfileBar/profile.dart';
 
 class Rumah extends StatefulWidget {
   @override

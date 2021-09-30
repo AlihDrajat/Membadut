@@ -1,6 +1,6 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-import 'package:login_cenah/convexAppBar.dart';
+import 'package:login_cenah/MainPage/convexAppBar.dart';
 
 final List<String> imgList = [
 // Zhongli Lantern Rite
@@ -72,13 +72,14 @@ class _LoginState extends State<Login> {
     return Scaffold(
       resizeToAvoidBottomInset: false,
       appBar: AppBar(
-          backgroundColor: Color.fromARGB(200, 156, 92, 54),
-          title: Text(
-            'Mari Membadut',
-            style: TextStyle(
-              color: Color.fromARGB(200, 255, 210, 130),
-            ),
-          )),
+        backgroundColor: Color.fromARGB(200, 156, 92, 54),
+        title: Text(
+          'Mari Membadut',
+          style: TextStyle(
+            color: Color.fromARGB(200, 255, 210, 130),
+          ),
+        ),
+      ),
       body: SingleChildScrollView(
         child: Container(
           height: 600,

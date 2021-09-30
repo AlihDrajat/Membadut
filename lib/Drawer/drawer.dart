@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:login_cenah/main.dart';
+import 'package:login_cenah/MainPage/main.dart';
 
 import 'package:login_cenah/Drawer/pertanyaan.dart';
 import 'package:login_cenah/Drawer/saran.dart';
