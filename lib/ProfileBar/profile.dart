@@ -26,10 +26,6 @@ class _ProfileState extends State<Profile> {
     return Scaffold(
       resizeToAvoidBottomInset: false,
       drawer: Drawers(),
-      appBar: AppBar(
-        backgroundColor: Color.fromARGB(255, 156, 92, 54),
-        title: Text('Profile'),
-      ),
       body: Container(
         color: Color.fromARGB(255, 88, 92, 95),
         child: Stack(

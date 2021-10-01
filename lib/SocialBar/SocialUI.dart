@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../Drawer/drawer.dart';
 import 'MessageTab/favContact.dart';
 import 'MessageTab/recent.dart';
 
@@ -47,7 +46,7 @@ class _SocialUIState extends State<SocialUI> {
 
   @override
   Widget build(BuildContext context) {
-    TabBar myTabBar = TabBar(
+    TabBar socialTabBar = TabBar(
       isScrollable: true,
       unselectedLabelColor: Colors.white.withOpacity(0.3),
       indicatorColor: Colors.white,
@@ -82,18 +81,13 @@ class _SocialUIState extends State<SocialUI> {
     return DefaultTabController(
       length: categories.length,
       child: Scaffold(
-        drawer: Drawers(),
         appBar: AppBar(
           backgroundColor: Color.fromARGB(255, 156, 92, 54),
           bottom: PreferredSize(
-            preferredSize: Size.fromHeight(myTabBar.preferredSize.height),
+            preferredSize: Size.fromHeight(0),
             child: Container(
-              child: myTabBar,
+              child: socialTabBar,
             ),
-          ),
-          title: Text(
-            'Social',
-            style: TextStyle(fontSize: 23, fontWeight: FontWeight.bold),
           ),
         ),
         body: Container(

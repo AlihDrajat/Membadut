@@ -16,6 +16,7 @@ class Rumah extends StatefulWidget {
 
 class _RumahState extends State<Rumah> {
   int selectedIndex = 0;
+
   List<Widget> listWidgets = [
     HomeUI(),
     Discovery(),
@@ -24,10 +25,23 @@ class _RumahState extends State<Rumah> {
     Profile()
   ];
 
+  List<String> appBarTitle = [
+    'Home',
+    'Discovery',
+    'Add',
+    'Social',
+    'Profile',
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       drawer: Drawers(),
+      appBar: AppBar(
+        elevation: 0,
+        backgroundColor: Color.fromARGB(255, 156, 92, 54),
+        title: Text(appBarTitle[selectedIndex]),
+      ),
       body: listWidgets[selectedIndex],
       bottomNavigationBar: ConvexAppBar.badge(
         {3: '21'},

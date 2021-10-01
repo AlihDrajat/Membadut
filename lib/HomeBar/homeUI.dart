@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import '../Drawer/drawer.dart';
 
 class HomeUI extends StatefulWidget {
   const HomeUI({Key? key}) : super(key: key);
@@ -60,19 +59,17 @@ class _HomeUIState extends State<HomeUI> {
     return DefaultTabController(
       length: categories.length,
       child: Scaffold(
-        drawer: Drawers(),
         appBar: AppBar(
           backgroundColor: Color.fromARGB(255, 156, 92, 54),
           bottom: PreferredSize(
-            preferredSize: Size.fromHeight(homeTabBar.preferredSize.height),
+            preferredSize: Size.fromHeight(0),
             child: Container(
               child: homeTabBar,
             ),
           ),
-          title: Text('Home'),
         ),
         body: Container(
-          color: Color.fromARGB(255, 156, 92, 54),
+          color: Color.fromARGB(255, 88, 92, 95),
           child: TabBarView(
             children: <Widget>[
               Text('Home'),
