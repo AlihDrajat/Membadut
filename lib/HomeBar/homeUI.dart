@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'nameCard.dart';
+
 class HomeUI extends StatefulWidget {
   const HomeUI({Key? key}) : super(key: key);
 
@@ -54,6 +56,12 @@ class _HomeUIState extends State<HomeUI> {
     ],
   );
 
+  Widget _buildHomeUI() {
+    return Container(
+      child: Column(children: <Widget>[NameCard()]),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
@@ -72,7 +80,7 @@ class _HomeUIState extends State<HomeUI> {
           color: Color.fromARGB(255, 88, 92, 95),
           child: TabBarView(
             children: <Widget>[
-              Text('Home'),
+              _buildHomeUI(),
               Text('Following'),
               Text('Guides'),
               Text('Events'),

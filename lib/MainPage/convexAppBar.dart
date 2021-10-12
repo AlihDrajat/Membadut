@@ -4,9 +4,7 @@ import '../HomeBar/homeUI.dart';
 import '../SocialBar/SocialUI.dart';
 import '../Drawer/drawer.dart';
 import 'package:convex_bottom_bar/convex_bottom_bar.dart';
-
 import '../DiscoveryBar/discovery.dart';
-
 import '../ProfileBar/profile.dart';
 
 class Rumah extends StatefulWidget {
@@ -16,7 +14,6 @@ class Rumah extends StatefulWidget {
 
 class _RumahState extends State<Rumah> {
   int selectedIndex = 0;
-
   List<Widget> listWidgets = [
     HomeUI(),
     Discovery(),
@@ -38,7 +35,7 @@ class _RumahState extends State<Rumah> {
     return Scaffold(
       drawer: Drawers(),
       appBar: AppBar(
-        elevation: 0,
+        elevation: 5,
         backgroundColor: Color.fromARGB(255, 156, 92, 54),
         title: Text(appBarTitle[selectedIndex]),
       ),
@@ -50,8 +47,8 @@ class _RumahState extends State<Rumah> {
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
           colors: [
-            Color.fromARGB(230, 255, 160, 55),
-            Color.fromARGB(230, 186, 100, 70),
+            Color.fromARGB(255, 255, 160, 55),
+            Color.fromARGB(255, 186, 100, 70),
           ],
         ),
         color: Color.fromARGB(200, 100, 45, 16),

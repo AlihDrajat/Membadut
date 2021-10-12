@@ -28,8 +28,17 @@ class _SocialUIState extends State<SocialUI> {
               decoration: BoxDecoration(
                 color: Color.fromARGB(255, 88, 92, 95),
                 borderRadius: BorderRadius.only(
-                    topLeft: Radius.circular(30),
-                    topRight: Radius.circular(30)),
+                  topLeft: Radius.circular(30),
+                  topRight: Radius.circular(30),
+                ),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.black.withOpacity(0.4),
+                    spreadRadius: 6,
+                    blurRadius: 4,
+                    offset: Offset(1, 5),
+                  ),
+                ],
               ),
               child: Column(
                 children: <Widget>[

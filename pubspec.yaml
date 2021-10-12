@@ -74,6 +74,7 @@ flutter:
     - assets/xiao.jpeg
     - assets/zhongli.jpeg
     - assets/albedo.jpeg
+    - assets/expedition.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

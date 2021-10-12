@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../Drawer/drawer.dart';
+
 import 'birth.dart';
 import 'coverImage.dart';
 import 'follower.dart';
@@ -25,7 +25,6 @@ class _ProfileState extends State<Profile> {
     Size screenSize = MediaQuery.of(context).size;
     return Scaffold(
       resizeToAvoidBottomInset: false,
-      drawer: Drawers(),
       body: Container(
         color: Color.fromARGB(255, 88, 92, 95),
         child: Stack(
