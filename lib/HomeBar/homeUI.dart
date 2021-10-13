@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import 'nameCard.dart';
+import 'package:login_cenah/HomeBar/HomeTab/people.dart';
 
 class HomeUI extends StatefulWidget {
   const HomeUI({Key? key}) : super(key: key);
@@ -58,7 +57,7 @@ class _HomeUIState extends State<HomeUI> {
 
   Widget _buildHomeUI() {
     return Container(
-      child: Column(children: <Widget>[NameCard()]),
+      child: Column(children: <Widget>[People()]),
     );
   }
 
