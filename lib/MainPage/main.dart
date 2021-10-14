@@ -103,7 +103,7 @@ class _LoginState extends State<Login> {
                 height: 1,
               ),
               Text(
-                'Welkom to badut community ^_^',
+                'Welkom to GChat ^_^',
                 style: TextStyle(
                   fontSize: 20,
                 ),

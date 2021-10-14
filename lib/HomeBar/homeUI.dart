@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:login_cenah/HomeBar/HomeTab/people.dart';
+import 'package:login_cenah/HomeBar/HomeTab/nameCard.dart';
+import 'package:login_cenah/HomeBar/HomeTab/post.dart';
+import 'package:login_cenah/HomeBar/HomeTab/story.dart';
 
 class HomeUI extends StatefulWidget {
   const HomeUI({Key? key}) : super(key: key);
@@ -56,8 +58,27 @@ class _HomeUIState extends State<HomeUI> {
   );
 
   Widget _buildHomeUI() {
-    return Container(
-      child: Column(children: <Widget>[People()]),
+    return SingleChildScrollView(
+      child: Container(
+        height: 600,
+        child: Column(
+          children: <Widget>[
+            Expanded(
+              child: Column(
+                children: <Widget>[
+                  Story(),
+                  Divider(
+                    height: 3,
+                    color: Color.fromARGB(255, 156, 92, 54),
+                  ),
+                  NameCard(),
+                  Post()
+                ],
+              ),
+            ),
+          ],
+        ),
+      ),
     );
   }
 
