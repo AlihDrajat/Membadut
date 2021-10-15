@@ -54,3 +54,66 @@ final User xiao = User(
     name: 'Manusia adalah Alat',
     imageUrl: 'assets/xiao.jpeg',
     signature: '');
+
+List<User> following = [
+  User(
+    id: 1,
+    name: 'Calonku',
+    imageUrl: 'assets/ayaka.jpg',
+    signature: '',
+  ),
+  User(
+    id: 2,
+    name: 'Chef Ei',
+    imageUrl: 'assets/Ei.jpeg',
+    signature: '',
+  ),
+  User(
+    id: 3,
+    name: 'Eula',
+    imageUrl: 'assets/eula.jpeg',
+    signature: '',
+  ),
+  User(
+    id: 4,
+    name: 'Kang Peti',
+    imageUrl: 'assets/hutao.jpeg',
+    signature: '',
+  ),
+  User(
+    id: 5,
+    name: 'Qurban',
+    imageUrl: 'assets/ganyu.jpeg',
+    signature: '',
+  ),
+  User(
+    id: 6,
+    name: 'Yanfei',
+    imageUrl: 'assets/yanfei.jpeg',
+    signature: '',
+  ),
+  User(
+    id: 7,
+    name: 'Peledak Handal',
+    imageUrl: 'assets/yoimiya.jpeg',
+    signature: '',
+  ),
+  User(
+    id: 8,
+    name: 'Exuvia',
+    imageUrl: 'assets/zhongli.jpeg',
+    signature: '',
+  ),
+  User(
+    id: 9,
+    name: 'Pamannya Klee',
+    imageUrl: 'assets/albedo.jpeg',
+    signature: '',
+  ),
+  User(
+    id: 10,
+    name: 'Manusia adalah alat',
+    imageUrl: 'assets/xiao.jpeg',
+    signature: '',
+  ),
+];
