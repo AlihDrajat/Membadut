@@ -3,6 +3,8 @@ import 'package:login_cenah/HomeBar/HomeTab/nameCard.dart';
 import 'package:login_cenah/HomeBar/HomeTab/post.dart';
 import 'package:login_cenah/HomeBar/HomeTab/story.dart';
 
+import 'FollowingTab/following.dart';
+
 class HomeUI extends StatefulWidget {
   const HomeUI({Key? key}) : super(key: key);
 
@@ -57,7 +59,7 @@ class _HomeUIState extends State<HomeUI> {
     ],
   );
 
-  Widget _buildHomeUI() {
+  Widget _buildHomeTab() {
     return SingleChildScrollView(
       child: Container(
         height: 600,
@@ -82,6 +84,19 @@ class _HomeUIState extends State<HomeUI> {
     );
   }
 
+  Widget _buildFollowingTab() {
+    return SingleChildScrollView(
+      child: Container(
+        height: 600,
+        child: Column(
+          children: <Widget>[
+            YourFollowing(),
+          ],
+        ),
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
@@ -100,8 +115,8 @@ class _HomeUIState extends State<HomeUI> {
           color: Color.fromARGB(255, 88, 92, 95),
           child: TabBarView(
             children: <Widget>[
-              _buildHomeUI(),
-              Text('Following'),
+              _buildHomeTab(),
+              _buildFollowingTab(),
               Text('Guides'),
               Text('Events'),
               Text('Quiz'),
