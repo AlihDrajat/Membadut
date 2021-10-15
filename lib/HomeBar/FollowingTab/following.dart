@@ -21,6 +21,14 @@ class _YourFollowingState extends State<YourFollowing> {
                 Expanded(
                   child: Container(
                     decoration: BoxDecoration(
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.black.withOpacity(0.5),
+                          spreadRadius: 2,
+                          blurRadius: 8,
+                          offset: Offset(0, 3),
+                        ),
+                      ],
                       color: Color.fromARGB(255, 156, 92, 54),
                       borderRadius: BorderRadius.all(
                         Radius.circular(10),
@@ -63,23 +71,39 @@ class _YourFollowingState extends State<YourFollowing> {
                               backgroundImage:
                                   AssetImage(following[index].imageUrl),
                             ),
+                            SizedBox(
+                              width: 7,
+                            ),
                             Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
                               children: <Widget>[
-                                Text(following[index].name),
-                                Text(following[index].signature),
+                                Text(
+                                  following[index].name,
+                                ),
+                                Container(
+                                  width:
+                                      MediaQuery.of(context).size.width * 0.50,
+                                  child: Text(
+                                    following[index].signature,
+                                    overflow: TextOverflow.ellipsis,
+                                  ),
+                                ),
                               ],
                             ),
                           ],
                         ),
                         Container(
-                          decoration: BoxDecoration(
-                              border: Border.all(
-                                width: 2,
-                                color: Color.fromARGB(255, 140, 141, 143),
-                              ),
-                              shape: BoxShape.rectangle),
-                          padding: EdgeInsets.all(3),
-                          child: Text('Following'),
+                          color: Color.fromARGB(255, 110, 111, 113),
+                          child: Container(
+                            decoration: BoxDecoration(
+                                border: Border.all(
+                                  width: 2,
+                                  color: Color.fromARGB(255, 140, 141, 143),
+                                ),
+                                shape: BoxShape.rectangle),
+                            padding: EdgeInsets.all(3),
+                            child: Text('Following'),
+                          ),
                         ),
                       ],
                     ),

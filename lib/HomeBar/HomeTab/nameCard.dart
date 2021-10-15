@@ -11,6 +11,14 @@ class NameCard extends StatelessWidget {
         height: 200,
         width: 325,
         decoration: BoxDecoration(
+          boxShadow: [
+            BoxShadow(
+              color: Colors.black.withOpacity(0.5),
+              spreadRadius: 2,
+              blurRadius: 8,
+              offset: Offset(0, 3),
+            ),
+          ],
           image: DecorationImage(
               image: AssetImage('assets/expedition.jpg'), fit: BoxFit.fill),
           borderRadius: BorderRadius.all(
